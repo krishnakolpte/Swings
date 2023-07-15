@@ -1,0 +1,1345 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+    --primary-color-hue: 252;
+    --dark-color-lightness: 17%;
+    --light-color-lightness: 95%;
+    --white-color-lightness: 100%;
+
+    --white-color: hsl(252, 30%, var(--white-color-lightness));
+    --light-color: hsl(252, 30%, var(--light-color-lightness));
+    --gray-color: hsl(var(--primary-color-hue), 15%, 65%);
+    --primary-color: hsl(var(--primary-color-hue), 75%, 60%);
+    --secondory-color: hsl(252, 100%, 90%);
+    --success-color: hsl(120, 95%, 65%);
+    --danger-color: hsl(0, 95%, 65%);
+    --dark-color: hsl(252, 30%, var(--dark-color-lightness));
+    --black-color: hsl(252, 30%, 10%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    overflow-x: hidden;
+}
+
+/* ---------general style----------- */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.profile-picture {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 100ms ease;
+    font-size: 0.9rem;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+.text-bold {
+    font-weight: 500;
+}
+.text-muted {
+    color: var(--gray-color);
+}
+
+/* ---------NAVBAR----------- */
+
+nav {
+    width: 100vw;
+    background-color: var(--white-color);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+nav .logo > img {
+    width: 50px;
+    height: 50px;
+}
+nav .create {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav #login-btn {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* ---------------MAIN SECTION---------- */
+
+main {
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: 18vw 40vw 20vw;
+    column-gap: 2rem;
+    position: relative;
+}
+
+/* ---------------LEFT SECTION---------- */
+main .container .left {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+main .container .left .profile {
+    padding: var(--card-padding);
+    background: var(--white-color);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+/* --------------SIDEBAR--------- */
+.left .sidebar {
+    margin-top: 1rem;
+    background: var(--white-color);
+    border-radius: var(--card-border-radius);
+}
+.left .sidebar .menu-item {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+}
+
+.left .sidebar .menu-item:hover {
+    background: var(--light-color);
+}
+
+.left .sidebar i {
+    font-size: 1.4rem;
+    color: var(--gray-color);
+    margin-left: 2rem;
+    position: relative;
+}
+.left .sidebar i .notification-count {
+    background: var(--danger-color);
+    color: white;
+    font-size: 0.7rem;
+    width: fit-content;
+    border-radius: 0.8rem;
+    padding: 0.1rem 0.4rem;
+    position: absolute;
+    top: -0.2rem;
+    right: -0.4rem;
+}
+.left .sidebar h3 {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+}
+
+.left .sidebar .active {
+    background: var(--light-color);
+}
+.left .sidebar .active i,
+.left .sidebar .active h3 {
+    color: var(--primary-color);
+}
+
+.left .sidebar .active::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background: var(--primary-color);
+}
+.left .sidebar .menu-item:first-child.active {
+    border-top-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+.left .sidebar .menu-item:last-child.active {
+    border-bottom-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left .btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+/* --------------------notification popup-------- */
+
+.left .notification-popup {
+    position: absolute;
+    top: 0;
+    left: 110%;
+    width: 30rem;
+    background: var(--white-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: 0 0 1rem var(--primary-color);
+    z-index: 8;
+    display: none;
+}
+.left .notification-popup::before {
+    content: "";
+    width: 1.3rem;
+    height: 1.3rem;
+    display: block;
+    background: var(--white-color);
+    position: absolute;
+    left: -0.6rem;
+    transform: rotate(45deg);
+}
+
+.left .notification-popup > div {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.left .notification-popup small {
+    display: block;
+}
+
+/* -------------MIDDLE--------- */
+
+.middle .stories {
+    width: 100%;
+    height: 12rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.middle .stories .story {
+    position: relative;
+    cursor: pointer;
+    width: 170px;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 1rem;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    color: white;
+    font-size: 0.75rem;
+    transition: all 0.3s;
+}
+
+.stories .story .info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middle .stories .story::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(transparent, rgba(0, 0, 00.75));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.middle .stories .story .name {
+    z-index: 2;
+}
+
+.middle .stories .story:nth-child(1) {
+    background: url("https://images.pexels.com/photos/11473272/pexels-photo-11473272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        no-repeat center center/cover;
+}
+
+.middle .stories .story .profile-picture {
+    align-self: start;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid var(--primary-color);
+}
+
+/* ------------------feeds--------------- */
+
+.middle .feeds .feed {
+    background: var(--white-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+}
+
+.middle .feeds .feed .head {
+    display: flex;
+    justify-content: space-between;
+}
+.feed .head .user .profile-picture {
+    width: 2rem;
+    height: 2rem;
+}
+.feed .head .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.feed-body img {
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+.feeds .feed .feed-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.feeds .feed .feed-footer .interaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin: 0.6rem;
+}
+
+.feed-footer .interaction .interaction-btns > span {
+    cursor: pointer;
+}
+
+.liked-by {
+    display: flex;
+}
+
+.liked-by span {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--white-color);
+    margin-left: -0.6rem;
+}
+.liked-by span:first-child {
+    margin: 0;
+}
+.liked-by p {
+    margin-left: 0.5rem;
+}
+.feed-footer .hashtag {
+    color: var(--primary-color);
+}
+
+/* ---------------------------right-------------------- */
+
+main .container .right {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+}
+.right .messages {
+    background: var(--white-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+.search-bar {
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+.search-bar input[type="search"] {
+    background: transparent;
+    widows: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+}
+nav .search-bar input[type="search"]::placeholder {
+    color: var(--gray-color);
+}
+.right .messages .headding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.messages .headding i {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.messages .search-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.messages .search-bar input {
+    font-size: 1rem;
+}
+
+.messages .category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.messages .category h6 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid var(--light-color);
+    font-size: 0.85rem;
+}
+.messages .category .active {
+    color: var(--primary-color);
+    border-bottom: 4px solid var(--dark-color);
+}
+
+.messages .message {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.message .message-body h5 {
+    font-size: 1rem;
+}
+.message .message-body p {
+    font-size: 0.8rem;
+}
+.message .profile-picture {
+    position: relative;
+    width: 35%;
+}
+.message .profile-picture .active {
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    bottom: 5px;
+    right: 2px;
+    background: var(--success-color);
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+}
+/* -----------------REQUESTS----------------- */
+.right .requests {
+    margin-top: 1rem;
+}
+
+.right .requests h4 {
+    margin: 1rem 0;
+    color: var(--gray-color);
+}
+.right .request {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    background: var(--white-color);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+}
+
+.request .info {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.request .profile-picture {
+    position: relative;
+    width: 30%;
+}
+.request .profile-picture .active {
+    width: 0.8rem;
+    height: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--success-color);
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+}
+.request div > h5 {
+    font-size: 1rem;
+}
+.request div > p {
+    font-size: 0.8rem;
+}
+
+.request .request-action {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ---------------------CUSTOMIZE BACGROUND------------- */
+
+.custom-theme {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+.custom-theme .card {
+    background: var(--white-color);
+    padding: 3rem;
+    border-radius: var(--card-border-radius);
+    width: 50%;
+    box-shadow: 0 0 1rem var(--secondory-color);
+}
+
+/* ---------------FONT SIZES--------------- */
+.card .font-size {
+    margin-top: 5rem;
+}
+.card .font-size > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--search-padding);
+}
+
+.card .choose-size {
+    background: var(--secondory-color);
+    height: 0.3rem;
+    width: 100%;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card .choose-size span {
+    width: 1rem;
+    height: 1rem;
+    background: var(--secondory-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.card .choose-size .active {
+    background: var(--primary-color);
+}
+
+/* ---------------FONT COLORS--------------- */
+
+.card .color {
+    margin-top: 2rem;
+}
+.color .chose-color {
+    background: var(--light-color);
+    border-radius: var(--card-border-radius);
+    padding: var(--search-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.color .chose-color span {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.color .chose-color span:nth-child(1) {
+    background: hsl(252, 75%, 60%);
+}
+.color .chose-color span:nth-child(2) {
+    background: hsl(52, 75%, 60%);
+}
+.color .chose-color span:nth-child(3) {
+    background: hsl(352, 75%, 60%);
+}
+.color .chose-color span:nth-child(4) {
+    background: hsl(152, 75%, 60%);
+}
+.color .chose-color span:nth-child(5) {
+    background: hsl(202, 75%, 60%);
+}
+
+.color .chose-color span.active {
+    border: 5px solid var(--white-color);
+}
+
+/* ---------------BACKGROND COLORS--------------- */
+.card .backgrond {
+    margin-top: 2rem;
+}
+.backgrond .choose-bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.backgrond .choose-bg > div {
+    padding: var(--card-padding);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    gap: 1rem;
+    cursor: pointer;
+}
+.backgrond .choose-bg > div.active {
+    border: 2px solid var(--primary-color);
+}
+.backgrond .choose-bg > div span {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--gray-color);
+}
+
+.choose-bg .bg-1 {
+    background: white;
+    color: black;
+}
+
+.choose-bg .bg-2 {
+    background: hsl(252, 30%, 17%);
+    color: white;
+}
+.choose-bg .bg-3 {
+    background: hsl(252, 30%, 10%);
+    color: white;
+}
+
+.create-post-popup {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.create-post-popup .card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white-color);
+    padding: 3rem;
+    border-radius: var(--card-border-radius);
+    width: 50%;
+    gap: 1rem;
+    box-shadow: 0 0 1rem var(--secondory-color);
+}
+
+.card2 h2 {
+    font-size: 2rem;
+}
+.card2 p {
+    font-size: 1rem;
+}
+
+.create-post {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background: var(--white-color);
+    padding: 0.4rem var(--card-padding);
+    border-radius: var(--card-border-radius);
+    border: 2px solid var(--primary-color);
+}
+
+.create-post > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.create-post > form > div {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--light-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-post > form > input[type="url"] {
+    border: 1px solid var(--secondory-color);
+    padding: 5px 15px;
+    border-radius: var(--border-radius);
+    background: transparent;
+    color: var(--dark-color);
+    width: 70%;
+    font-size: 1rem;
+}
+
+.create-post > form > div > input[type="text"] {
+    background: transparent;
+    color: var(--dark-color);
+    width: 70%;
+    font-size: 1rem;
+}
+
+/* ===========================Chat Page================== */
+
+.chat-popup {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+.chat-popup .chat-card {
+    display: grid;
+    grid-template-columns: 18vw auto;
+    padding: 1rem;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-color);
+    border-radius: var(--card-border-radius);
+    width: 80%;
+    height: 90%;
+    gap: 1rem;
+    box-shadow: 0 0 1rem var(--secondory-color);
+}
+
+.chat-card .chat-left {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2rem 2rem auto;
+    row-gap: 1rem;
+}
+
+.chat-left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.chat-left .search-bar {
+    border: 1px solid var(--primary-color);
+    width: 100%;
+    background: var(--white-color);
+    padding-inline: 0.5rem;
+}
+
+.chat-left .chat-users {
+    overflow-y: auto;
+    height: 460px;
+    background: var(--white-color);
+    border-radius: var(--card-border-radius);
+    background: var(--light-color);
+    border: 1px solid var(--gray-color);
+}
+
+.chat-left .chat-users .user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--white-color);
+    padding: var(--card-padding);
+    gap: 1rem;
+    transition: all 0.3s;
+}
+
+.chat-left .chat-users .user:hover {
+    background: var(--light-color);
+    cursor: pointer;
+}
+
+.chat-left .chat-users .user .info {
+    text-align: start;
+}
+.chat-users .user .info h5 {
+    font-size: 1rem;
+}
+
+.chat-card .chat-right {
+    display: grid;
+    grid-template-rows: 4rem 440px 3rem;
+    border: 1px solid var(--gray-color);
+    background: var(--white-color);
+    border-radius: var(--card-border-radius);
+}
+
+.chat-right .chat-user-active {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chat-right .chat-user-active .user {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    gap: 2rem;
+    padding: var(--card-padding);
+}
+.chat-right .chat-user-active .user .info h5 {
+    font-size: 1.2rem;
+}
+
+.chat-right .chat-user-active .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 1rem;
+    padding: var(--card-padding);
+}
+
+.chat-right .chat-user-active .options > p > i:hover {
+    cursor: pointer;
+}
+
+.chat-right .chat-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 1rem;
+    padding: var(--card-padding);
+    overflow-y: auto;
+    background: var(--light-color);
+}
+
+.chat-box .chat-message {
+    border-radius: 0px 1rem 0px 1rem;
+    background: var(--white-color);
+    padding: var(--btn-padding);
+    width: fit-content;
+}
+
+.chat-box .chat-message p {
+    font-size: 1rem;
+}
+
+.chat-right .chat-controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    gap: 1rem;
+    padding-inline: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    border: 2px solid var(--light-color);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-controls > input[type="text"] {
+    font-size: inherit;
+    background: var(--white-color);
+    color: var(--dark-color);
+    width: 100%;
+}
+
+/* ========================STORY POPUP PAGE=========================== */
+
+.story-popup {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.story-popup .story-card {
+    display: grid;
+    padding: 1rem;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    width: 30%;
+    height: 80%;
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+/* --------------------------------LOGIN PAGE------------------------- */
+
+.login {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.login .login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    width: 40%;
+    gap: 1rem;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.login .login-card form {
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    gap: 2rem;
+}
+.login .login-card form div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login .login-card form div input {
+    border: 2px solid var(--primary-color);
+    border-radius: var(--card-border-radius);
+    width: 80%;
+    padding: var(--card-padding);
+    font-size: 1rem;
+}
+.link {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* --------------------------------Signup PAGE------------------------- */
+
+.signup {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.signup .signup-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    width: 40%;
+    gap: 1rem;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.signup .signup-card form {
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    gap: 2rem;
+}
+.signup .signup-card form div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.signup .signup-card form div input {
+    border: 2px solid var(--primary-color);
+    border-radius: var(--card-border-radius);
+    width: 80%;
+    padding: var(--card-padding);
+    font-size: 1rem;
+}
+.link {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* ------------------------------Profile page------------------ */
+
+.profile-page {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.profile-page .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    width: 70%;
+    height: 80%;
+    gap: 1rem;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.profile-page .profile-card div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.profile-page .profile-card div > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.profile-page .profile-card div > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+.profile-page .profile-card div > div .profile-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* -------------------------------ABOUT US PAGE---------------------------------- */
+
+.about-us {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.about-us .about-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 80%;
+    height: 90%;
+    gap: 1rem;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.about-us .about-card .logo-move {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us .about-card .logo-move .logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about-us .about-card .logo-move .logo > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.about-us .about-card .logo-move .logo > h1 {
+    margin-top: 1.5rem;
+}
+
+.about-us .about-card .team-members {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.about-us .about-card .team-members .member {
+    width: 200px;
+    gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+.about-us .about-card .team-members .member:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.about-us .about-card .team-members .member > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.about-us .about-card .team-members .member > h5 {
+    font-size: 1rem;
+}
+
+/* --------------------------------Update Profile PAGE------------------------- */
+
+.update-profile {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.update-profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    width: 40%;
+    gap: 1rem;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.update-profile .update-profile-card form {
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    gap: 2rem;
+}
+.update-profile .update-profile-card form div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.update-profile .update-profile-card form div input {
+    border: 2px solid var(--primary-color);
+    border-radius: var(--card-border-radius);
+    width: 80%;
+    padding: var(--card-padding);
+    font-size: 1rem;
+}
+
+/* --------------------------------Update Password PAGE------------------------- */
+
+.update-password {
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.update-password-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    width: 40%;
+    gap: 1rem;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.update-password .update-password-card form {
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    gap: 2rem;
+}
+.update-password .update-password-card form div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.update-password .update-password-card form div input {
+    border: 2px solid var(--primary-color);
+    border-radius: var(--card-border-radius);
+    width: 80%;
+    padding: var(--card-padding);
+    font-size: 1rem;
+}
+
+/* ------------------LIKE----------- */
+
+.like-active {
+    color: red;
+}

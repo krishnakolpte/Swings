@@ -1,0 +1,787 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="https://res.cloudinary.com/do3egmobd/image/upload/v1689352816/swings_kls_bca2_htv6qk.png" />
+        <link
+            rel="stylesheet"
+            href="style.css" />
+        <link
+            rel="stylesheet"
+            href="medeaQuerry.css" />
+
+        <title>Swings - made by V7 group</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img
+                        src="https://res.cloudinary.com/do3egmobd/image/upload/v1689352816/swings_kls_bca2_htv6qk.png"
+                        alt="" />
+                    <h2>swings</h2>
+                </div>
+                <div class="create">
+                    <label
+                        class="btn btn-primary"
+                        for="create-post"
+                        id="create"
+                        >Create</label
+                    >
+                    <label
+                        class="btn btn-primary"
+                        for="login"
+                        id="login-btn"
+                        >Login</label
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- -------------MAIN SECTION----------------->
+        <main>
+            <div class="container">
+                <!-- -------------LEFT SECTION----------------->
+                <div class="left">
+                    <a
+                        class="profile"
+                        id="profile-action">
+                        <div class="profile-picture">
+                            <img
+                                src="https://res.cloudinary.com/do3egmobd/image/upload/v1689352816/swings_kls_bca2_htv6qk.png"
+                                alt="" />
+                        </div>
+                        <div class="handle">
+                            <h4>Swings</h4>
+                            <p class="text-muted">@swings</p>
+                        </div>
+                    </a>
+                    <!-- -------------SIDEBAR SECTION----------------->
+                    <div class="sidebar">
+                        <a class="menu-item active">
+                            <span><i class="fa-solid fa-house"></i></span>
+                            <h3>Home</h3>
+                        </a>
+                        <a
+                            class="menu-item"
+                            id="chat">
+                            <span><i class="fa-brands fa-rocketchat"></i></span>
+                            <h3>Chat</h3>
+                        </a>
+                        <a
+                            class="menu-item"
+                            id="notification">
+                            <span
+                                ><i class="fa-solid fa-bell"
+                                    ><small class="notification-count"
+                                        >9+</small
+                                    ></i
+                                ></span
+                            >
+                            <h3>Notifications</h3>
+                            <!-- -------Notification popup--------->
+                            <div class="notification-popup">
+                                <div>
+                                    <div class="profile-picture">
+                                        <img
+                                            src="https://cdn.pixabay.com/photo/2015/09/09/06/57/child-931152_1280.jpg"
+                                            alt="" />
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Akash madival</b> accepted your
+                                        request
+                                        <small class="text-muted"
+                                            >2 DAYS AGO</small
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            class="menu-item"
+                            id="messages-notification">
+                            <span
+                                ><i class="fa-solid fa-message"
+                                    ><small class="notification-count"
+                                        >9</small
+                                    ></i
+                                ></span
+                            >
+                            <h3>Messages</h3>
+                        </a>
+                        <a class="menu-item">
+                            <span><i class="fa-regular fa-bookmark"></i></span>
+                            <h3>Bookmarks</h3>
+                        </a>
+                        <a
+                            class="menu-item"
+                            id="about">
+                            <span
+                                ><i class="fa-solid fa-address-card"></i
+                            ></span>
+                            <h3>About us</h3>
+                        </a>
+                        <a
+                            class="menu-item"
+                            id="theme">
+                            <span><i class="fa-solid fa-palette"></i></span>
+                            <h3>Theme</h3>
+                        </a>
+                        <a
+                            class="menu-item"
+                            id="profile-a">
+                            <span><i class="fa-solid fa-user"></i></span>
+                            <h3>Profile</h3>
+                        </a>
+                    </div>
+                    <!-- ----------End of section----------- -->
+                    <label
+                        for="create-post"
+                        class="btn btn-primary"
+                        >Create post</label
+                    >
+                </div>
+                <!-- -------------MIDDLE SECTION----------------->
+                <div class="middle">
+                    <!-- ------------STORYES------------- -->
+                    <div class="stories"></div>
+
+                    <!-- -----------FEEDS------------ -->
+
+                    <div class="feeds">
+                        <!-- -----------FEED------------ -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-picture">
+                                        <img
+                                            src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                            alt="" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Swings</h3>
+                                        <small>Dubi, 15 MINITS AGO</small>
+                                    </div>
+                                </div>
+                                <div class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            <div class="feed-body">
+                                <img
+                                    src="https://th.bing.com/th/id/OIP.FU2xd-Ww0IeAdMUd9UlVpQHaJu?pid=ImgDet&rs=1"
+                                    alt="" />
+                            </div>
+                            <div class="feed-footer">
+                                <div class="interaction">
+                                    <div class="interaction-btns">
+                                        <span
+                                            ><i
+                                                class="fa-solid fa-heart like"></i
+                                        ></span>
+                                        <span
+                                            ><i
+                                                class="fa-regular fa-comment-dots"></i
+                                        ></span>
+                                        <span
+                                            ><i
+                                                class="fa-sharp fa-solid fa-share-nodes"></i
+                                        ></span>
+                                    </div>
+                                    <div class="bookmark">
+                                        <span
+                                            ><i
+                                                class="fa-regular fa-bookmark"></i
+                                        ></span>
+                                    </div>
+                                </div>
+                                <div class="liked-by">
+                                    <span
+                                        ><img
+                                            src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                            alt=""
+                                    /></span>
+                                    <span
+                                        ><img
+                                            src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                            alt=""
+                                    /></span>
+                                    <span
+                                        ><img
+                                            src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                            alt=""
+                                    /></span>
+
+                                    <p>
+                                        Liked by <b>Krishna kolapte</b> and
+                                        <b>2,4367 others</b>
+                                    </p>
+                                </div>
+                                <div class="caption">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                        <span class="hashtag">#motivation</span>
+                                    </p>
+                                </div>
+                                <div class="comments text-muted">
+                                    View all 277 comments
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -------------RIGHT SECTION----------------->
+                <div class="right">
+                    <div class="messages">
+                        <div class="headding">
+                            <h4>Messages</h4>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </div>
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input
+                                type="search"
+                                placeholder="Search message"
+                                id="message-search" />
+                        </div>
+                        <div class="category">
+                            <h6 class="active">Primary</h6>
+                            <h6>General</h6>
+                            <h6 class="message-requests">Requests</h6>
+                        </div>
+                        <div class="message">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Ram Dhooth</h5>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Laxman Dhooth</h5>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- -----------end message------------ -->
+                    </div>
+                    <!-- -------------------FRIEND REQUESTS---------------- -->
+                    <div class="requests">
+                        <h4>Requests</h4>
+                        <div class="request">
+                            <div class="info">
+                                <div class="profile-picture">
+                                    <img
+                                        src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                        alt="" />
+                                    <div class="active"></div>
+                                </div>
+                                <div>
+                                    <h5>Narayan Kadam</h5>
+                                    <p class="text-muted">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="request-action">
+                                <button
+                                    class="btn btn-primary"
+                                    id="accept">
+                                    Accept
+                                </button>
+                                <button
+                                    class="btn"
+                                    id="decline">
+                                    Decline
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- --------------------THEME CUSTOMIZATION--------------------- -->
+        <div class="custom-theme">
+            <div class="card">
+                <h2>Custmize you theme</h2>
+                <p class="text-muted">
+                    Manage your font size and color, and background.
+                </p>
+                <!-- ---------------FONT SIZES--------------- -->
+                <div class="font-size">
+                    <h4>Font Size</h4>
+                    <div>
+                        <h6>Aa</h6>
+                        <div class="choose-size">
+                            <span class="font-size-1"></span>
+                            <span class="font-size-2 active"></span>
+                            <span class="font-size-3"></span>
+                            <span class="font-size-4"></span>
+                            <span class="font-size-5"></span>
+                        </div>
+                        <h3>Aa</h3>
+                    </div>
+                </div>
+                <!-- -----------------Colors-------------- -->
+                <div class="color">
+                    <h4>Color</h4>
+                    <div class="chose-color">
+                        <span class="color-1 active"></span>
+                        <span class="color-2"></span>
+                        <span class="color-3"></span>
+                        <span class="color-4"></span>
+                        <span class="color-5"></span>
+                    </div>
+                </div>
+                <!-- -------------BACKGROUND COLOR-------------- -->
+                <div class="backgrond">
+                    <h4>Backgrond</h4>
+                    <div class="choose-bg">
+                        <div class="bg-1 active">
+                            <span></span>
+                            <h5>Light</h5>
+                        </div>
+                        <div class="bg-2">
+                            <span></span>
+                            <h5>Dim</h5>
+                        </div>
+                        <div class="bg-3">
+                            <span></span>
+                            <h5>Dark</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -----------------------CREATE POST POPUP----------------------- -->
+        <div class="create-post-popup">
+            <div class="card2">
+                <h2>Create Your Post</h2>
+                <p class="text-muted">whats going on your mind?</p>
+                <div class="create-post">
+                    <form>
+                        <input
+                            type="url"
+                            id="file"
+                            value="https://th.bing.com/th/id/OIP.gKQJLlQFK_G35l0-NxFgswHaEo?pid=ImgDet&rs=1"
+                            placeholder="Enter the image URL" />
+                        <div>
+                            <div class="profile-picture">
+                                <img
+                                    src="https://res.cloudinary.com/do3egmobd/image/upload/v1689352816/swings_kls_bca2_htv6qk.png"
+                                    alt="" />
+                            </div>
+                            <input
+                                type="text"
+                                placeholder="Whats on youe mind?"
+                                id="create-post" />
+                            <span
+                                class="btn btn-primary"
+                                onclick="getPostData()"
+                                >Post</span
+                            >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------CHATS---------------- -->
+
+        <div class="chat-popup">
+            <div class="chat-card">
+                <div class="chat-left">
+                    <h2>Swings Chat</h2>
+                    <div class="search-bar-card">
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input
+                                type="search"
+                                placeholder="Search"
+                                id="search-user" />
+                        </div>
+                    </div>
+                    <div class="chat-users">
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                            </div>
+                            <div class="info">
+                                <h5>Legend Sir</h5>
+                                <p class="text-muted">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                            </div>
+                            <div class="info">
+                                <h5>Akash madival</h5>
+                                <p class="text-muted">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                            </div>
+                            <div class="info">
+                                <h5>Rahul Juvekar</h5>
+                                <p class="text-muted">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                            </div>
+                            <div class="info">
+                                <h5>Amul sir</h5>
+                                <p class="text-muted">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                            </div>
+                            <div class="info">
+                                <h5>Amrut sir</h5>
+                                <p class="text-muted">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                            </div>
+                            <div class="info">
+                                <h5>Narayan Kadam</h5>
+                                <p class="text-muted">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                            </div>
+                            <div class="info">
+                                <h5>Krishna Kolapte</h5>
+                                <p class="text-muted">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-right">
+                    <div class="chat-user-active">
+                        <div class="user">
+                            <div class="profile-picture">
+                                <img
+                                    src="https://cdn.pixabay.com/photo/2015/06/22/08/40/child-817373_1280.jpg"
+                                    alt="" />
+                            </div>
+                            <div class="info">
+                                <h5>Ram Dhooth</h5>
+                                <p class="text-muted">Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <p><i class="fa-sharp fa-solid fa-trash"></i></p>
+                            <p>
+                                <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                            </p>
+                            <p><i class="fa-solid fa-ellipsis-vertical"></i></p>
+                        </div>
+                    </div>
+                    <div class="chat-box">
+                        <div class="chat-message">
+                            <p>Welcome to swings social media chat</p>
+                        </div>
+                    </div>
+                    <div class="chat-controls">
+                        <input
+                            type="text"
+                            placeholder="whats on your mind ?"
+                            id="chat-message" />
+                        <span
+                            class="btn btn-primary"
+                            id="sendMessage"
+                            >Send</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---------------------------STORY POPUP PAGE--------------- -->
+        <div class="story-popup">
+            <div class="story-card"></div>
+        </div>
+
+        <!-- ----------------------LOGIN PAGE------------------------ -->
+
+        <div class="login">
+            <div class="login-card">
+                <h1>Welcome to Swings</h1>
+                <p>Lorem ipsum dolor sit amet consectet.</p>
+                <form>
+                    <div>
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="user-email"
+                            placeholder="Enter your email" />
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="user-password"
+                            placeholder="Enter your password" />
+                    </div>
+                    <span
+                        class="btn btn-primary"
+                        id="login"
+                        >Login</span
+                    >
+                </form>
+                <p>
+                    New user?
+                    <span
+                        class="link"
+                        id="signup-btn"
+                        >create account</span
+                    >
+                </p>
+            </div>
+        </div>
+        <!-- ----------------------LOGIN PAGE------------------------ -->
+        <div class="signup">
+            <div class="signup-card">
+                <h1>Welcome to Swings</h1>
+                <p>Lorem ipsum dolor sit amet consectet.</p>
+                <form>
+                    <div>
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name" />
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="user-email-signup"
+                            placeholder="Enter your email" />
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="user-password-signup"
+                            placeholder="Enter your password" />
+                    </div>
+                    <span
+                        class="btn btn-primary"
+                        id="signup"
+                        >Sign Up</span
+                    >
+                </form>
+                <p>
+                    Already have Account?
+                    <span
+                        class="link"
+                        id="login-btn2"
+                        >login</span
+                    >
+                    here
+                </p>
+            </div>
+        </div>
+        <!-- ----------------------LOGIN PAGE------------------------ -->
+        <div class="profile-page">
+            <div class="profile-card">
+                <h1>PROFILE</h1>
+                <div>
+                    <img
+                        src="https://res.cloudinary.com/do3egmobd/image/upload/v1689352816/swings_kls_bca2_htv6qk.png"
+                        alt="" />
+                    <div>
+                        <h2>Swings</h2>
+                        <h5>swings@gmail.com</h5>
+                        <p>Join on 12/12/2022</p>
+
+                        <div class="profile-actions">
+                            <button
+                                class="btn btn-primary"
+                                id="update-profile-id">
+                                Update Profile
+                            </button>
+                            <button
+                                class="btn btn-primary"
+                                id="update-password-id">
+                                Update Password
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------LOGIN PAGE------------------------ -->
+        <div class="update-profile">
+            <div class="update-profile-card">
+                <h1>Update Profile</h1>
+                <form>
+                    <div>
+                        <label for="user-update-name">Name</label>
+                        <input
+                            type="text"
+                            id="user-update-name"
+                            placeholder="Enter your name" />
+                    </div>
+                    <div>
+                        <label for="user-update-email">Email</label>
+                        <input
+                            type="email"
+                            id="user-update-email"
+                            placeholder="Enter your email" />
+                    </div>
+                    <span
+                        class="btn btn-primary"
+                        id="update-profile"
+                        >Update</span
+                    >
+                </form>
+            </div>
+        </div>
+        <!-- ----------------------UPDATE PASSWORD PAGE------------------------ -->
+        <div class="update-password">
+            <div class="update-password-card">
+                <h1>Update Password</h1>
+                <form>
+                    <div>
+                        <label for="old-password">Old password</label>
+                        <input
+                            type="password"
+                            id="old-password"
+                            placeholder="Enter your old password" />
+                    </div>
+                    <div>
+                        <label for="new-password">New password</label>
+                        <input
+                            type="password"
+                            id="new-password"
+                            placeholder="Enter your new password" />
+                    </div>
+                    <span
+                        class="btn btn-primary"
+                        id="update-password"
+                        >Update</span
+                    >
+                </form>
+            </div>
+        </div>
+        <!-- ----------------------ABOUT US PAGE------------------------ -->
+        <div class="about-us">
+            <div class="about-card">
+                <h1>About Us</h1>
+                <div class="logo-move">
+                    <div class="logo">
+                        <img
+                            src="https://res.cloudinary.com/do3egmobd/image/upload/v1689352816/swings_kls_bca2_htv6qk.png"
+                            alt="" />
+                        <h1>SWINGS</h1>
+                    </div>
+                </div>
+                <div class="team-members">
+                    <div class="member">
+                        <img
+                            src="https://res.cloudinary.com/do3egmobd/image/upload/v1689398329/WhatsApp_Image_2023-07-15_at_1.16.29_AM_dabpoc.jpg"
+                            alt="" />
+                        <h5 class="text-bold">Krishna Kolapte</h5>
+                    </div>
+                    <div class="member">
+                        <img
+                            src="https://res.cloudinary.com/do3egmobd/image/upload/v1689398779/WhatsApp_Image_2023-07-15_at_1.25.38_AM_gogtf9.jpg"
+                            alt="" />
+                        <h5 class="text-bold">Akash madiwal</h5>
+                    </div>
+                    <div class="member">
+                        <img
+                            src="https://res.cloudinary.com/do3egmobd/image/upload/v1689398943/WhatsApp_Image_2023-07-15_at_1.26.19_AM_psxftw.jpg"
+                            alt="" />
+                        <h5 class="text-bold">Rahul Juvekar</h5>
+                    </div>
+                    <div class="member">
+                        <img
+                            src="https://res.cloudinary.com/do3egmobd/image/upload/v1689399034/WhatsApp_Image_2023-07-15_at_1.26.56_AM_mafzmc.jpg"
+                            alt="" />
+                        <h5 class="text-bold">NARAYAN KADAM</h5>
+                    </div>
+                    <div class="member">
+                        <img
+                            src="https://res.cloudinary.com/do3egmobd/image/upload/v1689399253/WhatsApp_Image_2023-07-15_at_1.30.35_AM_gwy5rd.jpg"
+                            alt="" />
+                        <h5 class="text-bold">Vivekanand Dalal</h5>
+                    </div>
+                    <div class="member">
+                        <img
+                            src="https://res.cloudinary.com/do3egmobd/image/upload/v1689399110/WhatsApp_Image_2023-07-15_at_1.28.24_AM_oarwv1.jpg"
+                            alt="" />
+                        <h5 class="text-bold">Amrut Aravalli</h5>
+                    </div>
+                    <div class="member">
+                        <img
+                            src="https://res.cloudinary.com/do3egmobd/image/upload/v1689399295/WhatsApp_Image_2023-07-15_at_1.33.41_AM_ap6pim.jpg"
+                            alt="" />
+                        <h5 class="text-bold">Amul Bargundi</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://kit.fontawesome.com/54ce3068b3.js"
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
